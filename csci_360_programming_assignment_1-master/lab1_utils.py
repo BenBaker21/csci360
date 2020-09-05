@@ -21,6 +21,7 @@ class TextbookStack(object):
         self.orientations[:position] = np.abs(self.orientations[:position] - 1)[::-1]
 
     def check_ordered(self):
+
         for idx, front_matter in enumerate(self.orientations):
             if (idx != self.order[idx]) or (front_matter != 1):
                 return False
